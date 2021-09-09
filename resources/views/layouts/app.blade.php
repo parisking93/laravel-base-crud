@@ -8,9 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    
-    @include('partials.header')
-    <main>@yield('main')</main>
-    @include('partials.footer')
+    <div class="d-flex contenitore">
+        @include('partials.headerBord')
+        @include('partials.header')
+        <main>@yield('main')</main>
+    </div>
 </body>
 </html>

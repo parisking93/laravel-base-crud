@@ -11231,3 +11231,29 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.contenitore {
+  height: 100vh;
+}
+.contenitore table {
+  margin-top: 100px;
+}
+
+header {
+  background-color: #c7e2ba;
+  height: 100%;
+}
+
+.header-bord {
+  height: 100px;
+  background-color: #c7e2ba;
+  z-index: -1;
+}
+
+main {
+  width: 100%;
+}
+
+.box-title {
+  text-align: center;
+  margin-top: 110px;
+}
