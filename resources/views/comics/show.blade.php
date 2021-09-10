@@ -10,8 +10,8 @@
             <th scope="col">Title</th>
             <th scope="col">Tipo</th>
             <th scope="col">Descrizione</th>
-            <th scope="col">Data Vendita</th>
-            <th scope="col">Serie</th>
+            <th scope="col">Data Sconto</th>
+            <th scope="col">Categoria</th>
             <th scope="col">€</th>
             </tr>
         </thead>
@@ -27,7 +27,7 @@
                     <td>{{ $comicId->price }}</td>
 
                     <td class="text-center">
-                        <a href="" class="btn btn-primary w-100 my-2">Edit</a>
+                        <a href="{{ route('comics.edit', [ $comicId -> id])}}" class="btn btn-primary w-100 my-2">Edit</a>
                         <a href="" class="btn btn-danger w-100">Delete</a>
                     </td>
                 </tr>

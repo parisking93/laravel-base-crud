@@ -29,7 +29,7 @@
 
                 <td class="text-center">
                     <a href="{{ route('comics.show', [ 'comic' => $book -> id])}}" class="btn btn-success w-100">Show</a>
-                    <a href="" class="btn btn-primary w-100 my-2">Edit</a>
+                    <a href="{{ route('comics.edit', [ 'comic' => $book -> id])}}" class="btn btn-primary w-100 my-2">Edit</a>
                     <a href="" class="btn btn-danger w-100">Delete</a>
                 </td>
             </tr>
