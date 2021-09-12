@@ -8,6 +8,8 @@
         <div class="badge badge-success">{{ @session('modificato') }}</div>
     @elseif (@session('nuovo'))
         <div class="badge badge-success">{{ @session('nuovo') }}</div>
+    @elseif (@session('cancellato'))
+        <div class="badge badge-danger">{{ @session('cancellato') }}</div>
     @endif
     <table class="table">
     <thead>
@@ -35,7 +37,12 @@
                 <td class="text-center">
                     <a href="{{ route('comics.show', [ 'comic' => $book -> id])}}" class="btn btn-success w-100">Show</a>
                     <a href="{{ route('comics.edit', [ 'comic' => $book -> id])}}" class="btn btn-primary w-100 my-2">Edit</a>
-                    <a href="" class="btn btn-danger w-100">Delete</a>
+                    <form class="w-100" action="{{ route('comics.destroy', [ 'comic' => $book -> id])}}" method="post">
+                        @csrf
+                        <!-- aggiungiamo il metodo delete perchè il form puo avere solo post and get  -->
+                        @method('DELETE')
+                        <input type="submit" class="btn btn-danger w-100" value="Delete">
+                    </form>
                 </td>
             </tr>
         @endforeach
