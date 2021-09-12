@@ -1,4 +1,4 @@
-<header class="p-5">
+<header class="p-5 h-100 position-relative">
     <ul class="nav flex-column">
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>

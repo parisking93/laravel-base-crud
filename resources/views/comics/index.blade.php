@@ -4,13 +4,16 @@
 @section('main')
 
 <div>
+    <div class="box-message">
     @if(@session('modificato')) 
-        <div class="badge badge-success">{{ @session('modificato') }}</div>
+        <div class="badge alert-success">{{ @session('modificato') }}</div>
     @elseif (@session('nuovo'))
-        <div class="badge badge-success">{{ @session('nuovo') }}</div>
+        <div class="badge alert-success">{{ @session('nuovo') }}</div>
     @elseif (@session('cancellato'))
-        <div class="badge badge-danger">{{ @session('cancellato') }}</div>
+        <div class="badge alert-danger">{{ @session('cancellato') }}</div>
     @endif
+    </div>
+
     <table class="table">
     <thead>
         <tr>

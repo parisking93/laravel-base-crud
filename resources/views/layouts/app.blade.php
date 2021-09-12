@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <title>Document</title>
 </head>
-<body>
+<body class="overflow-hidden">
     <div class="d-flex contenitore">
         @include('partials.headerBord')
         @include('partials.header')
-        <main>@yield('main')</main>
+        <main class="overflow-auto">@yield('main')</main>
     </div>
 </body>
 </html>
