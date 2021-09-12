@@ -4,6 +4,11 @@
 @section('main')
 
 <div>
+    @if(@session('modificato')) 
+        <div class="badge badge-success">{{ @session('modificato') }}</div>
+    @elseif (@session('nuovo'))
+        <div class="badge badge-success">{{ @session('nuovo') }}</div>
+    @endif
     <table class="table">
     <thead>
         <tr>

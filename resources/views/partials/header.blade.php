@@ -8,7 +8,7 @@
             @if ( Route::currentRouteName() == "comics.index")
                 <ul class="nav flex-column ps-2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">ADD Comic</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('comics.create') }}">ADD Comic</a>
                     </li>
                 </ul>
             @endif

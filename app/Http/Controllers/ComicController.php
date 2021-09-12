@@ -25,7 +25,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -37,13 +37,13 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        dd($data);
         $newComic = new Comic();
 
+        // aggiungo tutti i dati che ho insiserito sul form, usando fill... e grazie fillable (nel metod gli dico quali deve inserire)
         $newComic->fill($data);
         $newComic->save();
 
-        return redirect()->route('comics.show', $comicId->id);
+        return redirect()->route('comics.index')->with('nuovo', 'Hai aggiunto correttamente il nuovo record ');
     }
 
     /**
@@ -80,9 +80,16 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+
+    //  uso le injection 
+    public function update(Request $request, Comic $comic)
     {
-        //
+        // vengo dal form di comic.edit e gli passo l'elemento da modificare
+        $data = $request->all();
+        // uso il metodo update per modificare il record 
+        $comic->update($data);
+        // ritorno alla index dove sono tutti i comic e uso redirect
+        return redirect()->route('comics.index')->with('modificato', 'Hai modificato correttamente il record ' . $comic->id);
     }
 
     /**
