@@ -7,6 +7,7 @@
     <div class="box-message">
     @if(@session('modificato')) 
         <div class="badge alert-success">{{ @session('modificato') }}</div>
+        
     @elseif (@session('nuovo'))
         <div class="badge alert-success">{{ @session('nuovo') }}</div>
     @elseif (@session('cancellato'))

@@ -11268,6 +11268,9 @@ body main .contenitore-form {
   height: calc(100vh - 150px);
   overflow: hidden;
 }
+body main .contenitore-form .format {
+  font-size: 14px;
+}
 body main form {
   overflow: auto;
 }

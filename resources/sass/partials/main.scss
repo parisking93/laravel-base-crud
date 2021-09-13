@@ -19,6 +19,9 @@ body {
         .contenitore-form {
             height: calc(100vh - 150px);
             overflow:hidden;
+            .format {
+                font-size: 14px;
+            }
         }
         form {
             overflow:auto;

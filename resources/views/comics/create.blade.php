@@ -25,7 +25,7 @@
             </div>
             <div class="mb-1 mx-4">
                 <label for="date-sale" class="form-label">data sconto</label>
-                <input type="text" name="sale_date" class="form-control" id="date-sale" value="">
+                <input type="text" name="sale_date" class="form-control" id="date-sale" value="" placeholder="yyyy/mm/gg">
             </div>
             <div class="mb-1 mx-4">
                 <label for="serie" class="form-label">Categoria</label>

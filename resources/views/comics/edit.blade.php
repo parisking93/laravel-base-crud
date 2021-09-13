@@ -26,7 +26,7 @@
             <input type="text" name="type" class="form-control" id="tipo" value="{{ $comicId->type }}">
         </div>
         <div class="mb-1 mx-4">
-            <label for="date-sale" class="form-label">data sconto</label>
+            <label for="date-sale" class="form-label">Data Sconto <span class="text-muted format"> formato : yyyy/mm/gg </span></label>
             <input type="text" name="sale_date" class="form-control" id="date-sale" value="{{ $comicId->sale_date }}">
         </div>
         <div class="mb-1 mx-4">
